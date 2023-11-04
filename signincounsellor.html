@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.cdnfonts.com/css/satoshi?styles=135009,135005,135007,135002,135000" rel="stylesheet">
+    <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="shuffle-for-tailwind.png">
+    <script src="js/main.js"></script>
+    <script>
+        function validateCredentials() {
+            var name = document.getElementById('nameInput').value;
+            var university = document.getElementById('universityInput').value;
+            var role = document.getElementById('roleInput').value;
+            
+            if(name === 'Thomas Brown' && university === 'NUS' && role === 'Career Counsellor') {
+                window.location.href = "https://varchanaiyer.github.io/careercompanion-counsellor/";
+            } else {
+                alert('Invalid credentials');
+            }
+        }
+    </script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <!-- Your existing body content -->
+
+    <section class="py-10 bg-gray-50 overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="p-10 bg-white rounded-3xl">
+                <!-- Other content -->
+                <form onsubmit="event.preventDefault(); validateCredentials();">
+                    <div class="flex flex-wrap -m-3">
+                        <div class="w-full p-3">
+                            <label class="block mb-2 text-sm text-gray-500 font-bold" for="nameInput">Name</label>
+                            <input class="appearance-none px-6 py-3.5 w-full text-lg text-gray-500 font-bold bg-gray-100 placeholder-gray-500 outline-none border border-gray-200 focus:ring-4 focus:ring-blue-200 rounded-full" id="nameInput" type="text" placeholder="Enter your name">
+                        </div>
+                        <div class="w-full p-3">
+                            <label class="block mb-2 text-sm text-gray-500 font-bold" for="universityInput">Name of University</label>
+                            <input class="appearance-none px-6 py-3.5 w-full text-lg text-gray-500 font-bold bg-gray-100 placeholder-gray-500 outline-none border border-gray-200 focus:ring-4 focus:ring-blue-200 rounded-full" id="universityInput" type="text" placeholder="Enter name of university">
+                        </div>
+                        <div class="w-full p-3">
+                            <label class="block mb-2 text-sm text-gray-500 font-bold" for="roleInput">Role</label>
+                            <select class="appearance-none px-6 py-3.5 w-full text-lg text-gray-500 font-bold bg-gray-100 placeholder-gray-500 outline-none border border-gray-200 focus:ring-4 focus:ring-blue-200 rounded-full" id="roleInput">
+                                <option value="Career Counsellor">Career Counsellor</option>
+                                <option value="School Admin">School Admin</option>
+                                <!-- Add more roles as needed -->
+                            </select>
+                        </div>
+                        <div class="w-full p-3">
+                            <button class="w-full px-6 py-3.5 text-lg text-white font-bold bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:ring-blue-200 rounded-full" type="submit">Sign In</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- The rest of your body content -->
+</body>
+</html>
